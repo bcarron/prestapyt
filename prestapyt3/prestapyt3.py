@@ -22,17 +22,16 @@ import urllib
 import warnings
 import requests
 import mimetypes
-import xml2dict
-import dict2xml
+from . import xml2dict
+from . import dict2xml
 
 from xml.parsers.expat import ExpatError
 from distutils.version import LooseVersion
 try:
     from xml.etree import cElementTree as ElementTree
-except ImportError, e:
+except ImportError as e:
     from xml.etree import ElementTree
 
-from .version import __author__, __version__  # noqa
 
 
 class PrestaShopWebServiceError(Exception):
@@ -226,7 +225,7 @@ class PrestaShopWebService(object):
 
         try:
             parsed_content = ElementTree.fromstring(content)
-        except ExpatError, err:
+        except ExpatError as err:
             raise PrestaShopWebServiceError(
                 'HTTP XML response is not parsable : %s' % (err,)
             )
