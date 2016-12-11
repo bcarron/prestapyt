@@ -62,7 +62,7 @@ class PrestaShopWebService(object):
     """
 
     MIN_COMPATIBLE_VERSION = '1.4.0.17'
-    MAX_COMPATIBLE_VERSION = '1.5.9.0'
+    MAX_COMPATIBLE_VERSION = '1.6.1.1'  # Not tested BE CAREFUL
 
     def __init__(self, api_url, api_key, debug=False, session=None):
         """
