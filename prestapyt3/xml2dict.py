@@ -134,7 +134,7 @@ if __name__ == '__main__':
     pprint(xml2dict(s))
 
     import dict2xml
-    from prestapyt import PrestaShopWebService
+    from prestapyt3 import PrestaShopWebService
     prestashop = PrestaShopWebService('http://localhost:8080/api',
                                       'BVWPFFYBT97WKM959D7AVVD0M4815Y1L')
 

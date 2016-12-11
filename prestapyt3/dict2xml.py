@@ -196,7 +196,7 @@ if __name__ == '__main__':
     print dict2xml(x)
 
     import xml2dict
-    from prestapyt import PrestaShopWebService
+    from prestapyt3 import PrestaShopWebService
     prestashop = PrestaShopWebService('http://localhost:8080/api',
                                       'BVWPFFYBT97WKM959D7AVVD0M4815Y1L')
 

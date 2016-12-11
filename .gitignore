@@ -1,6 +1,6 @@
 build
 dist
-prestapyt.egg-info
+*.egg-info
 *.pyc
 tags
 

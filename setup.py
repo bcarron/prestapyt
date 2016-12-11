@@ -12,6 +12,7 @@
 import os
 from setuptools import setup
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
@@ -21,25 +22,25 @@ with open('prestapyt3/version.py') as f:
 
 setup(
     # Basic package information.
-    name = 'prestapyt3',
-    version = __version__,
+    name='prestapyt3',
+    version=__version__,
 
     # Packaging options.
     include_package_data = True,
 
     # Package dependencies.
-    install_requires = ['requests',],
+    install_requires=['requests',],
 
     # Metadata for PyPI.
-    author = 'Guewen Baconnier',
-    author_email = 'guewen.baconnier@gmail.com',
-    license = 'GNU AGPL-3',
-    url = 'http://github.com/guewen/prestapyt3',
+    author='Blaise Carron',
+    author_email='blaise.carron@etu.unige.ch',
+    license='GNU AGPL-3',
+    url='https://github.com/bcarron/prestapyt3.git',
     packages=['prestapyt3'],
-    keywords = 'prestashop api client rest',
-    description = 'A library to access Prestashop Web Service from Python.',
-    long_description = read('README.md'),
-    classifiers = [
+    keywords='prestashop api client rest',
+    description='A library to access Prestashop Web Service from Python 3.',
+    long_description=read('README.md'),
+    classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3',
