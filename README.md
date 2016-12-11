@@ -1,3 +1,10 @@
+Prestapyt3
+=========
+
+prestapyt3 is a port of the preatapyt library for Python 3.x. All credit goes to Guewen Baconnier and other contributors at:
+https://github.com/prestapyt/prestapyt
+
+
 Prestapyt
 =========
 
