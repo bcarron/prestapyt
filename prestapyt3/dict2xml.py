@@ -21,7 +21,7 @@ def _process(doc, tag, tag_value):
     @param tag_value: tag value
     @return: node or nodelist, be careful
     """
-    if isinstance(tag_value, dict) and 'value' in tag_value.keys() == ['value']:
+    if isinstance(tag_value, dict) and 'value' in list(tag_value.copy().keys()) == ['value']:
         tag_value = tag_value['value']
 
     if tag_value is None:
