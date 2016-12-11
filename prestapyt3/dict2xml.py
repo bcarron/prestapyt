@@ -29,7 +29,7 @@ def _process(doc, tag, tag_value):
 
     # Create a new node for simple values
     if (isinstance(tag_value, (float, int)) or
-            isinstance(tag_value, (str, str))):
+            isinstance(tag_value, str)):
         return _process_simple(doc, tag, tag_value)
 
     # Return a list of nodes with same tag
@@ -47,7 +47,7 @@ def _process(doc, tag, tag_value):
             return node
         else:
             node = doc.createElement(tag)
-            nodelist, attrs = _process_complex(doc, tag_value.items())
+            nodelist, attrs = _process_complex(doc, list(tag_value.items()))
             for child in nodelist:
                 node.appendChild(child)
             for attr in attrs:
@@ -84,7 +84,7 @@ def _process_attr(doc, attr_value):
     @return: list of attributes
     """
     attrs = []
-    for attr_name, attr_value in attr_value.items():
+    for attr_name, attr_value in list(attr_value.items()):
         if isinstance(attr_value, dict):
             # FIXME: NS is not in the final xml, check why
             attr = doc.createAttributeNS(attr_value.get('xmlns', ''), attr_name)
@@ -117,7 +117,7 @@ def dict2xml(data, encoding='UTF-8'):
     doc = getDOMImplementation().createDocument(None, None, None)
     if len(data) > 1:
         raise Exception('Only one root node allowed')
-    root, _ = _process_complex(doc, data.items())
+    root, _ = _process_complex(doc, list(data.items()))
     doc.appendChild(root[0])
     return doc.toxml(encoding)
 
@@ -195,8 +195,8 @@ if __name__ == '__main__':
 
     print(dict2xml(x))
 
-    import xml2dict
-    from prestapyt3 import PrestaShopWebService
+    from . import xml2dict
+    from .prestapyt3 import PrestaShopWebService
     prestashop = PrestaShopWebService('http://localhost:8080/api',
                                       'BVWPFFYBT97WKM959D7AVVD0M4815Y1L')
 
