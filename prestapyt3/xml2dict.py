@@ -59,7 +59,7 @@ def _parse_node(node):
         tree['value'] = value
 
     # if there is only a value; no attribute, no child, we return directly the value
-    if list(tree.copy().keys()) == ['value']:
+    if list(tree.keys()) == ['value']:
         tree = tree['value']
     return tree
 
