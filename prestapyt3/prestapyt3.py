@@ -500,9 +500,15 @@ class PrestaShopWebServiceDict(PrestaShopWebService):
         if not elems:
             return []
         elif isinstance(elems, list):
-            ids = [int(elem['attrs']['id']) for elem in elems]
+            if options:
+                ids = [int(elem['id']) for elem in elems]
+            else:
+                ids = [int(elem['attrs']['id']) for elem in elems]
         else:
-            ids = [int(elems['attrs']['id'])]
+            if options:
+                ids = [int(elems['id'])]
+            else:
+                ids = [int(elems['attrs']['id'])]
         return ids
 
     def get_with_url(self, url):
