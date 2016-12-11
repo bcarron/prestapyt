@@ -39,7 +39,7 @@ class PrestaShopWebServiceError(Exception):
     """Generic PrestaShop WebServices error class
 
     To catch these, you need to import it in you code e.g. :
-    from prestapyt import PrestaShopWebServiceError
+    from prestapyt3 import PrestaShopWebServiceError
     """
 
     def __init__(self, msg, error_code=None,
@@ -70,7 +70,7 @@ class PrestaShopWebService(object):
         Create an instance of PrestashopWebService.
 
         In your code, you can use :
-        from prestapyt import PrestaShopWebService, PrestaShopWebServiceError
+        from prestapyt3 import PrestaShopWebService, PrestaShopWebServiceError
 
         try:
             prestashop = PrestaShopWebService(

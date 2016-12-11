@@ -1,0 +1,4 @@
+from prestapyt3 import PrestaShopWebService
+from prestapyt3 import PrestaShopWebServiceDict
+from prestapyt3 import PrestaShopWebServiceError
+from prestapyt3 import PrestaShopAuthenticationError

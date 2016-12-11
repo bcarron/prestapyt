@@ -15,13 +15,13 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-with open('prestapyt/version.py') as f:
+with open('prestapyt3/version.py') as f:
     # execute the file so __version__ is in the current scope
     exec(f.read())
 
 setup(
     # Basic package information.
-    name = 'prestapyt',
+    name = 'prestapyt3',
     version = __version__,
 
     # Packaging options.
@@ -34,8 +34,8 @@ setup(
     author = 'Guewen Baconnier',
     author_email = 'guewen.baconnier@gmail.com',
     license = 'GNU AGPL-3',
-    url = 'http://github.com/guewen/prestapyt',
-    packages=['prestapyt'],
+    url = 'http://github.com/guewen/prestapyt3',
+    packages=['prestapyt3'],
     keywords = 'prestashop api client rest',
     description = 'A library to access Prestashop Web Service from Python.',
     long_description = read('README.md'),

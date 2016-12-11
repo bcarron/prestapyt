@@ -1,4 +1,4 @@
-from prestapyt import PrestaShopWebService
+from prestapyt3 import PrestaShopWebService
 from xml.etree import ElementTree
 
 
