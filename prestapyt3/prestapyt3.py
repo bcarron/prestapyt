@@ -18,7 +18,9 @@
     Questions, comments? guewen.baconnier@gmail.com
 """
 
-import urllib
+import urllib.request
+import urllib.parse
+import urllib.error
 import warnings
 import requests
 import mimetypes
